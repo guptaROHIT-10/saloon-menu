@@ -101,12 +101,14 @@ document.addEventListener('DOMContentLoaded', () => {
 // Slider initialization
 
 // Our Menu Slider
+// Our Menu Slider
 $('#our-menus').slick({
   slidesToShow: 1,
   slidesToScroll: 1,
   arrows: false,
   fade: true,
   speed: 300,
+  infinite: true,
   asNavFor: '.slider-indicators-wrapper',
   draggable: false,
   swipe: false,
@@ -119,7 +121,10 @@ $('.slider-indicators-wrapper').slick({
   asNavFor: '#our-menus',
   dots: false,
   arrows: true,
+  centerMode: true,
+  centerPadding: '0px',
   focusOnSelect: true,
+  infinite: true,
   draggable: false,
   swipe: false,
   prevArrow: '<button class="slide-arrow prev-arrow"><i class="fas fa-chevron-left"></i></button>',
@@ -128,13 +133,15 @@ $('.slider-indicators-wrapper').slick({
     {
       breakpoint: 991,
       settings: {
-        slidesToShow: 5,
+        slidesToShow: 3,
+        centerMode: true,
       }
     },
     {
-      breakpoint: 990,
+      breakpoint: 767,
       settings: {
         slidesToShow: 1,
+        centerMode: false,
         arrows: true,
       }
     }
